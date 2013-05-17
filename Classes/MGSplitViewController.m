@@ -299,6 +299,7 @@
 			theView = controller.view;
 			if (theView) {
 				theView.frame = masterRect;
+                theView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleRightMargin;
 				if (!theView.superview) {
 					[controller viewWillAppear:NO];
 					[self.view addSubview:theView];
@@ -320,6 +321,7 @@
 			theView = controller.view;
 			if (theView) {
 				theView.frame = detailRect;
+                theView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 				if (!theView.superview) {
 					[self.view insertSubview:theView aboveSubview:self.masterViewController.view];
 				} else {
