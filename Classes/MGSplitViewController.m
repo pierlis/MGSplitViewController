@@ -474,7 +474,7 @@
 	leadingCorners.frame = leadingRect;
 	trailingCorners.frame = trailingRect;
 	
-	// Ensure corners are visible and frontmost.
+	// Ensure corners & divider are visible and frontmost.
 	if (!leadingCorners.superview) {
 		[self.view insertSubview:leadingCorners aboveSubview:self.detailViewController.view];
 		[self.view insertSubview:trailingCorners aboveSubview:self.detailViewController.view];
@@ -482,6 +482,7 @@
 		[self.view bringSubviewToFront:leadingCorners];
 		[self.view bringSubviewToFront:trailingCorners];
 	}
+    [self.view bringSubviewToFront:_dividerView];
 }
 
 
