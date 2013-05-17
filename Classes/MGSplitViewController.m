@@ -160,6 +160,15 @@
 
 
 #pragma mark -
+#pragma mark UIViewController
+
+- (UITabBarItem *)tabBarItem
+{
+    return self.masterViewController.tabBarItem;
+}
+
+
+#pragma mark -
 #pragma mark View management
 
 
